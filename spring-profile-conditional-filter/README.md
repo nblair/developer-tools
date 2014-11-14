@@ -13,7 +13,7 @@ or Shibboleth). It is not easy or realistic in all scenarios for a developer to 
 environment features available on their development workstations.
 
 A developer might want to add the PreAuthenticationSimulationServletFilter (see [preauth-simulation-filter
-sibling module](../preauth-simulation-filter)) to the application so when running the application locally, the headers and environment
+sibling module](../preauth-simulation-filter/README.md)) to the application so when running the application locally, the headers and environment
 variables provided by these Pre-Authentication tools are available.
 
 This might manifest in a Spring application like so:

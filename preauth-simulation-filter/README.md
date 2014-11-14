@@ -21,7 +21,7 @@ Since this filter is clearly going to give you the ability to simulate data for 
 make sure it's not something you deploy in your production environment. If you are doing this in production, definitely
 make sure you understand what you are doing.
 
-If you are using Spring, look at [spring-profile-conditional-filter](../spring-profile-conditional-filter) to wrap this filter in a way that
+If you are using Spring, look at [spring-profile-conditional-filter](../spring-profile-conditional-filter/README.md) to wrap this filter in a way that
 is conditionally activated.
 
 ### Configuring
