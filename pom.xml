@@ -14,6 +14,25 @@
 	<name>Developer Tools</name>
 	<description>Collection of modules helpful for local development.</description>
 	
+	<scm>
+		<connection>scm:git:git://github.com/nblair/developer-tools.git</connection>
+        <developerConnection>scm:git:git@github.com:nblair/developer-tools.git</developerConnection>
+		<url>https://github.com/nblair/developer-tools</url>
+	</scm>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<email>nicholas.blair@wisc.edu</email>
+			<name>Nicholas Blair</name>
+			<organization>University of Wisconsin-Madison</organization>
+		</developer>
+	</developers>
+	
 	<properties>
 		<spring.framework.version>3.2.9.RELEASE</spring.framework.version>
 	</properties>

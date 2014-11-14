@@ -1,7 +1,7 @@
 # Developer Tools
 
 This is a collection of (questionably?) useful libraries supporting
-my and my team's software development.
+me and my team's software development.
 
 ### preauth-simulation filter
 
