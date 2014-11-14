@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nblair/developer-tools.svg?branch=master)](https://travis-ci.org/nblair/developer-tools)
+
 # Developer Tools
 
 This is a collection of (questionably?) useful libraries supporting
