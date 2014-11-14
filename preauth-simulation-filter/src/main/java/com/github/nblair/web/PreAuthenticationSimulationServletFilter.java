@@ -38,27 +38,27 @@ import javax.servlet.http.HttpServletRequest;
  * Sample web.xml configuration: 
  <pre> 
   
-  <filter>
-    <filter-name>PreAuthenticationSimulationServletFilter</filter-name>
-    <filter-class>com.github.nblair.web.PreAuthenticationSimulationServletFilter</filter-class>
-    <init-param>
-      <param-name>preauth.remoteUser</param-name>
-      <param-value>someusername</param-value>
-    </init-param>
-    <init-param>
-      <param-name>preauth.headerNames</param-name>
-      <param-value>header1;header2;header3</param-value>
-    </init-param>
-    <init-param>
-      <param-name>preauth.headerValues</param-name>
-      <param-value>value1;mvalue2a,mvalue2b;value3</param-value>
-    </init-param>
-  </filter>
+  &lt;filter&gt;
+    &lt;filter-name&gt;PreAuthenticationSimulationServletFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;com.github.nblair.web.PreAuthenticationSimulationServletFilter&lt;/filter-class&gt;
+    &lt;init-param&gt;
+      &lt;param-name&gt;preauth.remoteUser&lt;/param-name&gt;
+      &lt;param-value&gt;someusername&lt;/param-value&gt;
+    &lt;/init-param&gt;
+    &lt;init-param&gt;
+      &lt;param-name&gt;preauth.headerNames&lt;/param-name&gt;
+      &lt;param-value&gt;header1;header2;header3&lt;/param-value&gt;
+    &lt;/init-param&gt;
+    &lt;init-param&gt;
+      &lt;param-name&gt;preauth.headerValues&lt;/param-name&gt;
+      &lt;param-value&gt;value1;mvalue2a,mvalue2b;value3&lt;/param-value&gt;
+    &lt;/init-param&gt;
+  &lt;/filter&gt;
 
-  <filter-mapping>
-    <filter-name>PreAuthenticationSimulationServletFilter</filter-name>
-    <url-pattern>/*</url-pattern>        
-  </filter-mapping>
+  &lt;filter-mapping&gt;
+    &lt;filter-name&gt;PreAuthenticationSimulationServletFilter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;        
+  &lt;/filter-mapping&gt;
   
  </pre>
  * 
