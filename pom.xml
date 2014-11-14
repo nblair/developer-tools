@@ -9,14 +9,14 @@
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
 	</parent>
-	
+
 	<packaging>pom</packaging>
 	<name>Developer Tools</name>
 	<description>Collection of modules helpful for local development.</description>
-	
+
 	<scm>
 		<connection>scm:git:git://github.com/nblair/developer-tools.git</connection>
-        <developerConnection>scm:git:git@github.com:nblair/developer-tools.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:nblair/developer-tools.git</developerConnection>
 		<url>https://github.com/nblair/developer-tools</url>
 	</scm>
 	<licenses>
@@ -32,7 +32,7 @@
 			<organization>University of Wisconsin-Madison</organization>
 		</developer>
 	</developers>
-	
+
 	<properties>
 		<spring.framework.version>3.2.9.RELEASE</spring.framework.version>
 	</properties>
@@ -77,6 +77,32 @@
 	</dependencyManagement>
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>com.mycila.maven-license-plugin</groupId>
+				<artifactId>maven-license-plugin</artifactId>
+				<version>1.9.0</version>
+				<configuration>
+					<basedir>${basedir}</basedir>
+					<header>short-license-header.txt</header>
+					<strictCheck>true</strictCheck>
+					<excludes>
+						<exclude>short-license-header.txt</exclude>
+						<exclude>README.md</exclude>
+						<exclude>LICENSE</exclude>
+						<exclude>NOTICE</exclude>
+						<exclude>.gitignore</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>check-license</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
