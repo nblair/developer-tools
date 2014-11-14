@@ -5,7 +5,7 @@ my and my team's software development.
 
 ### preauth-simulation filter
 
-[preauth-simulation filter](preauth-simulation-filter/README.md) includes a Java Servlet
+[preauth-simulation-filter](preauth-simulation-filter/README.md) includes a Java Servlet
 Filter that lets a developer spoof Pre-Authentication environments (Shibboleth, SiteMinder) locally
 without having to install them on their workstation.
 
