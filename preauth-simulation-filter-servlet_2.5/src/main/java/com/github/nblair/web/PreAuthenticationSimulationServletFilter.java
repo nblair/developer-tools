@@ -154,7 +154,8 @@ public class PreAuthenticationSimulationServletFilter implements Filter {
 		setAdditionalHeaders(names, values);
 		
 		String preauthEnabledParam = filterConfig.getInitParameter(INIT_PARAM_PREAUTH_ENABLED);
-		setEnabled(BooleanUtils.toBoolean(preauthEnabledParam));
+		boolean preauthEnabled = (null != preauthEnabledParam && preauthEnabledParam.equalsIgnoreCase("true"));
+		setEnabled(preauthEnabled);
 
 	}
 
