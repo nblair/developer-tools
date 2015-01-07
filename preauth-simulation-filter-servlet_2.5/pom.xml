@@ -6,7 +6,7 @@
 		<version>0.1.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>preauth-simulation-filter-servlet_2.5</artifactId>
-	<name>Pre-Authentication Simulation Filter</name>
+	<name>Pre-Authentication Simulation Filter (Servlet 2.5)</name>
 	<description>Servlet Filter useful for simulating Pre-Authentication environment in a servlet 2.5 environment. This allows a developer to spoof request headers or environment variables that would provided by preauth tools like Shibboleth and Siteminder without having those installed locally.</description>
 	
 	<dependencies>
