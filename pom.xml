@@ -37,6 +37,7 @@
 	</properties>
 	<modules>
 		<module>preauth-simulation-filter</module>
+		<module>preauth-simulation-filter-servlet_2.5</module>
 		<module>spring-profile-conditional-filter</module>
 	</modules>
 
