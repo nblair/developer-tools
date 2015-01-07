@@ -31,8 +31,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang3.BooleanUtils;
-
 /**
  * Servlet {@link Filter} that allows a developer to simulate various "pre-authentication"
  * behaviors that are not usually available on a developer's workstation.

@@ -67,6 +67,26 @@ public class PreAuthenticationSimulationServletFilterTest {
 		
 		new PreAuthenticationSimulationServletFilter().doFilter(request, response, chain);
 	}
+
+	/**
+	 * Populate {@link PreAuthenticationSimulationServletFilter#setRemoteUser(String)} but do NOT enable the preauth simulator and verify that the
+	 * {@link HttpServletRequest#getRemoteUser()} returns null.
+	 * 
+	 * @throws IOException
+	 * @throws ServletException
+	 */
+	@Test
+	public void disabledFilter_override_remoteUser() throws IOException, ServletException {
+		HttpServletRequest request = mock(HttpServletRequest.class);
+		HttpServletResponse response = mock(HttpServletResponse.class);
+		
+		PreAuthenticationSimulationServletFilter filter = new PreAuthenticationSimulationServletFilter();
+		filter.setEnabled(false);
+		filter.setRemoteUser("override-remoteUser");
+		
+		FilterChain chain = new SimpleAssertionFilterChain(null, Collections.<String, String>emptyMap());
+		filter.doFilter(request, response, chain);
+	}
 	/**
 	 * Populate {@link PreAuthenticationSimulationServletFilter#setRemoteUser(String)} and verify that the
 	 * {@link HttpServletRequest#getRemoteUser()} reflects the value.
@@ -80,6 +100,7 @@ public class PreAuthenticationSimulationServletFilterTest {
 		HttpServletResponse response = mock(HttpServletResponse.class);
 		
 		PreAuthenticationSimulationServletFilter filter = new PreAuthenticationSimulationServletFilter();
+		filter.setEnabled(true);
 		filter.setRemoteUser("override-remoteUser");
 		
 		FilterChain chain = new SimpleAssertionFilterChain("override-remoteUser", Collections.<String, String>emptyMap());
@@ -102,7 +123,7 @@ public class PreAuthenticationSimulationServletFilterTest {
 		additionalHeaders.put("foo1", Arrays.asList("bar1"));
 		additionalHeaders.put("foo2", Arrays.asList("bar2"));
 		filter.setAdditionalHeaders(additionalHeaders);
-		
+		filter.setEnabled(true);
 		FilterChain chain = new SimpleAssertionFilterChain(null, ImmutableMap.of("foo1", "bar1", "foo2", "bar2"));
 		filter.doFilter(request, response, chain);
 	}
