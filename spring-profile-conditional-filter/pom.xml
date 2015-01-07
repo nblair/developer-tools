@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>com.github.nblair</groupId>
 		<artifactId>developer-tools</artifactId>
-		<version>0.2.0</version>
+		<version>0.2.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>spring-profile-conditional-filter</artifactId>
 	<name>Spring Profile Conditional Filter</name>
