@@ -104,6 +104,8 @@
 						<exclude>LICENSE</exclude>
 						<exclude>NOTICE</exclude>
 						<exclude>.gitignore</exclude>
+						<exclude>**/node/</exclude>
+						<exclude>**/node_modules/</exclude>
 					</excludes>
 				</configuration>
 				<executions>
