@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.nblair</groupId>
 	<artifactId>developer-tools</artifactId>
-	<version>0.2.1-SNAPSHOT</version>
+	<version>0.3.0-SNAPSHOT</version>
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
@@ -40,6 +40,8 @@
 		<module>preauth-simulation-filter</module>
 		<module>preauth-simulation-filter-servlet_2.5</module>
 		<module>spring-profile-conditional-filter</module>
+		<module>spring-project-rest-api</module>
+		<module>angularjs-project-support</module>
 	</modules>
 
 	<dependencyManagement>
@@ -49,6 +51,16 @@
 				<artifactId>guava</artifactId>
 				<version>18.0</version>
 			</dependency>
+			<dependency>
+				<groupId>com.mangofactory</groupId>
+				<artifactId>swagger-springmvc</artifactId>
+				<version>1.0.2</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.inject</groupId>
+				<artifactId>javax.inject</artifactId>
+				<version>1</version>
+			</dependency>	
 			<dependency>
 				<groupId>javax.servlet</groupId>
 				<artifactId>javax.servlet-api</artifactId>
